@@ -33,12 +33,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reginaldcampbell/code-challenge.git"
+    "url": "git+https://github.com/anumitasri/code-challenge-solution.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/reginaldcampbell/code-challenge/issues"
+    "url": "https://github.com/anumitasri/code-challenge-solution"
   },
-  "homepage": "https://github.com/reginaldcampbell/code-challenge#readme"
+  "homepage": "https://github.com/anumitasri/code-challenge-solution#readme"
 }
