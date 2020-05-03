@@ -1,7 +1,7 @@
 FROM node:alpine
-COPY . app/
 WORKDIR '/app'
-RUN npm ci --only-production
-RUN npm run build
-EXPOSE 5000
-ENTRYPOINT npm run start
+COPY package.json .
+RUN npm install
+COPY . .
+CMD  ["npm","start"] 
+
