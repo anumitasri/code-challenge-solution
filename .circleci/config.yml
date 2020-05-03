@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:8
+
     steps:
       - checkout
       - restore_cache: 
@@ -19,6 +20,7 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
+      
       - run: # run tests
           name: Run Test and Coverage
           command: |
