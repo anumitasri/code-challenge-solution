@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Perf from 'react-addons-perf';
-window.perf = Perf;
+
+
 class App extends Component {
   render() {
     return (
