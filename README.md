@@ -89,6 +89,10 @@ This will let you view your web app in the browser.
 14. Your Heroku app is now ready to be deployed.
 
 
+############################################################################################
 
+### STEP 3 ->  Automated Testing
 
-
+1. Jest is used for application testing.
+2. Infrastructure testing is handled by CircleCi
+3. Performance testing is done in the browser by using Developer Tools > Performance.
