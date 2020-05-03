@@ -40,7 +40,8 @@ This will let you view your web app in the browser.
 9. To see the container with web app, write " npm start".  The app will run on the localhost at port 3001.
 
 ############################################################################################
-### STEP 2: CI/CD FRAMEWORK SETUP - Using CircleCi, CodeClimate and Heroku
+
+### STEP 2 ->  CI/CD FRAMEWORK SETUP - Using CircleCi, CodeClimate and Heroku
 
 1. Create a folder in your root and name it .circleci
 2. Create a config.yml file in the .circleci folder.
@@ -80,6 +81,14 @@ This will let you view your web app in the browser.
 6. Go to Settings > Test Coverage and copy the Test Reporter ID.
 7. Go back to CircleCI > settings > Environment Variables. Then add CC_TEST_REPORTER_ID and set its value to the Codeclimate test reporter Id.
 8. Once this is tun, run build on your project and the build should be successful.
+9. To set up Heroku, login to create an account. 
+10. In your terminal, run brew tap heroku/brew && brew install heroku to install heroku on your local machine.
+11. Initialize your git repository and push it to heroku by "git push heroku master"
+12. Go to Heroku dashboard, click on the Deploy tab and Connect to the correct GitHub repo.
+13. Next enable Automatic deployment and click on the  "Wait for CI to pass before deploy" check box.
+14. Your Heroku app is now ready to be deployed.
 
-9. To set up Heroku, 
+
+
+
 
