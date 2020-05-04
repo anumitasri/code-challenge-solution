@@ -50,26 +50,26 @@ This will let you view your web app in the browser.
     jobs:
     build:
     docker:
-      - image: circleci/node:8
+      - -image: circleci/node:8
 
     steps:
-      - checkout
-      - restore_cache: 
+      - -checkout
+      - -restore_cache: 
           key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
-      - run:
+      - -run:
           name: Setup Dependencies
           command: npm install
-      - run:
+      - -run:
           name: Setup Code Climate test-reporter
           command: |
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
-      - save_cache: 
+      - -save_cache: 
           key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
       
-      - run: # run tests
+      - -run: # run tests
           name: Run Test and Coverage
           command: |
             ./cc-test-reporter before-build
@@ -80,7 +80,7 @@ This will let you view your web app in the browser.
 5. Sign in to Codeclimate next and initialize your git repository and run build.
 6. Go to Settings > Test Coverage and copy the Test Reporter ID.
 7. Go back to CircleCI > settings > Environment Variables. Then add CC_TEST_REPORTER_ID and set its value to the Codeclimate test reporter Id.
-8. Once this is tun, run build on your project and the build should be successful.
+8. Once this is done, run build on your project and the build should be successful.
 9. To set up Heroku, login to create an account. 
 10. In your terminal, run brew tap heroku/brew && brew install heroku to install heroku on your local machine.
 11. Initialize your git repository and push it to heroku by "git push heroku master"
